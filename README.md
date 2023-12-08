@@ -1,1 +1,3 @@
-project run with npm run dev 
+Instruccion to run the project are :
+-npm install
+-npm run dev

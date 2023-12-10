@@ -28,8 +28,7 @@ for (let i = 0; i < newData[0].sections.length; i++) {
   element2.appendChild(p);
   element2.appendChild(img);
 
-
-  if (i === 0) {
+   if (i === 0) {
     element.onclick = function () {
       if (element2.style.display !== "none") {
         element2.style.display = "none";
@@ -42,48 +41,21 @@ for (let i = 0; i < newData[0].sections.length; i++) {
         showBtn2.style.borderTop = "2px solid #d5dbdb";
         icon.src = "src/svg/up-arrow.svg";
       }
-    };
-  } else if (i === 1) {
-    element.onclick = function () {
+    }
+  }
+    else{
+   element.onclick = function () {
       if (element2.style.display !== "none") {
         element2.style.display = "none";
         icon.src = "src/svg/down-arrow.svg";
       } else {
-        const showBtn2 = document.querySelector(`#button${1}`);
+        const showBtn2 = document.querySelector(`#button${i}`);
         element2.style.display = "flex";
         element2.style.flexDirection =  w < 820 ? "column" : "row";
         element.style.border = "none";
         showBtn2.style.borderTop = "2px solid #d5dbdb";
         icon.src = "src/svg/up-arrow.svg";
       }
-    };
-  } else if (i === 2) {
-    element.onclick = function () {
-      if (element2.style.display !== "none") {
-        element2.style.display = "none";
-        icon.src = "src/svg/down-arrow.svg";
-      } else {
-        const showBtn2 = document.querySelector(`#button${2}`);
-        element2.style.display = "flex";
-        element2.style.flexDirection =  w < 820 ? "column" : "row";
-        element.style.border = "none";
-        showBtn2.style.borderTop = "2px solid #d5dbdb";
-        icon.src = "src/svg/up-arrow.svg";
-      }
-    };
-  } else if (i === 3) {
-    element.onclick = function () {
-      if (element2.style.display !== "none") {
-        element2.style.display = "none";
-        icon.src = "src/svg/down-arrow.svg";
-      } else {
-        const showBtn2 = document.querySelector(`#button${3}`);
-        element2.style.display = "flex";
-        element2.style.flexDirection =  w < 820 ? "column" : "row";
-        element.style.border = "none";
-        showBtn2.style.borderTop = "2px solid #d5dbdb";
-        icon.src = "src/svg/up-arrow.svg";
-      }
-    };
+    }
   }
 }
